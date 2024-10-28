@@ -1,0 +1,315 @@
+html{
+    overflow-x: hidden;
+    font-size: 62.5%;/*10px*/
+    color: #383c3c;
+
+    /*フォント*/
+    font-optical-sizing: auto;
+    /* font-family: "M PLUS Rounded 1c", sans-serif; */
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    /*テキストの文末を揃える*/
+    text-align: justify;
+    text-justify: inter-ideograph;
+}
+
+/*コンテンツ幅*/
+
+.text-center{
+    /*テキストを縦中央にする*/
+    display: grid;
+    place-items: center;
+}
+.center{
+    text-align: center;
+}
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 15%;
+}
+.wrapper{
+    margin: 20px;
+}
+.outer{
+    margin-bottom: 30px;
+}
+.ma-ri{
+    margin-right: 80px;
+}
+.flex {
+    display: flex;
+}
+
+@media (max-width: 768px){
+    .container{
+    padding: 20% 0%;
+}
+}
+
+
+/*PCの時のみ横並び*/
+.pc-flex{
+    display: flex;
+
+    /*子要素を均等配置する。このとき左右端の要素を親要素の端に接して配置する*/
+    justify-content: space-between;
+
+    /*親要素の上下中央を基準に、中央揃えで配置する*/
+    align-items: center;
+}
+
+.reverse{
+    flex-direction: row-reverse;
+}
+.wrap{
+    flex-wrap: wrap;
+}
+@media (max-width: 768px){
+    .pc-flex{
+        display: block;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+    .reverse{
+    flex-direction: row;
+}
+}
+
+
+/*フォントサイズ*/
+.logo, .footer-logo{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 100%;
+    z-index: 999;
+}
+
+header  li{
+    font-size: 13px;
+    font-weight: 400;
+}
+
+
+h2{
+    font-size: 30px;
+    line-height: 50px;
+    font-weight: 700;
+}
+h3{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+p {
+	font-size: 14px;
+    line-height: 30px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+}
+
+footer a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+}
+footer a:hover{
+    color: #ea5506;
+}
+.copyright{
+    font-size: 14px;
+    font-weight: 400;
+    color: #dfdfdf;
+}
+
+/*メインコンテンツ*/
+#About{
+    background-color: #FBF9F7;
+}
+#Background{
+    background-color: #A1BFEE;
+}
+#TheGoal{
+    background-color: #FFD3A9;
+}
+#CurrentEfforts{
+    background-color: #C9E6CA;
+}
+#FuturePlans{
+    background-color: #CCBDD9;
+}
+
+.kakomi{
+
+}
+.kakomi h3{
+    background-color: #808080;
+    color: #ffffff;
+    border-radius: 25px;
+    padding: 0 10px;
+    width: 30%;
+    height: 70%;
+    transform: translateY(30px);
+}
+.kakomi p{
+    background-color: #fff;
+    border: 1px solid #000;
+    padding: 5% 10%;
+    border-radius: 25px;
+}
+/*VER-1*/
+.main-img-ver1 img{
+    width: 100vw;
+    height: 40vh;
+    object-fit: cover;
+    border-radius: 25px;
+}
+@media (max-width:768px){
+    .main-img-ver1 img{
+        width: 100%; 
+        height: 30vh;
+    }
+    .kakomi h3{
+        width: 70%;
+    }
+    .kakomi p{
+    padding: 10%;
+    }
+    .main-btn h3{
+        width: 70%;
+    }
+}
+
+/*VER-2 使わなくなった*/
+.main-img-ver2 img {
+    width: 30vw;
+    height: 30vh;
+    object-fit: cover;
+}
+
+.main-content-ver2{
+    width: 30vw;
+    height: auto;
+}
+
+@media (max-width:768px){
+    .main-img-ver2 img{
+        width: 100%; 
+        height: 50vh;
+    }
+    .main-content-ver2{
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+/*フッター*/
+footer{
+    background-color: #383c3c;
+    padding: 2rem;
+}
+footer a {
+    color: #fafafa;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ea5506;
+}
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.footer-navi {
+  margin-bottom: 2rem;
+}
+
+.footer-navi li {
+  display: inline-block;
+}
+
+.footer-navi li:not(:last-child) {
+  margin-right: 16px;
+}
+
+@media (min-width: 768px) {
+  .md-justify-between {
+    justify-content: space-between;
+  }
+
+  .copyright {
+    text-align: left;
+  }
+}
+
+/*ファーストビュー*/
+.fv-container{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  position: relative;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  background-size: cover;
+  background-position: center center;
+  animation: image-switch-animation 25s infinite;
+  animation-fill-mode: forwards;
+}
+
+.src1 {
+  background-image: url(../images/tea.jpg);
+}
+.src2 {
+  background-image: url(../images/school.jpg);
+}
+.src3 {
+  background-image: url(../images/home.png);
+}
+.src4 {
+  background-image: url(../images/sips&bites.jpg);
+}
+.src5 {
+  background-image: url(../images/dessin/orange.jpeg);
+}
+.src6 {
+  background-image: url(../images/dessin/IMG_2026.jpeg);
+}
+
+.image:nth-of-type(1) {
+  animation-delay: 0s;
+}
+.image:nth-of-type(2) {
+  animation-delay: 5s;
+}
+.image:nth-of-type(3) {
+  animation-delay: 10s;
+}
+.image:nth-of-type(4) {
+  animation-delay: 15s;
+}
+.image:nth-of-type(5) {
+  animation-delay: 20s;
+}
+.image:nth-of-type(6) {
+  animation-delay: 25s;
+}
+
+@keyframes image-switch-animation {
+  0%{ opacity: 0;}
+  5%{ opacity: 1;}
+  80%{ opacity: 0.5;}
+  100%{ opacity: 0;}
+}
